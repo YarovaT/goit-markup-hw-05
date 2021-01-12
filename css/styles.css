@@ -361,6 +361,25 @@ a {
   padding-bottom: 94px;
 }
 
+.direct-info .item {
+  position: relative;
+}
+
+.direct-info .item > .label {
+  position: absolute;
+  bottom: 0;
+  padding: 27px 0;
+
+  width: 100%;
+
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-background-color);
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 /* Секция Команда */
 .team {
   background-color: var(--secondary-background-color);
