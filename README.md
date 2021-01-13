@@ -18,34 +18,3 @@ data-modal-open - на кнопку открытия модального окн
 data-modal-close - на кнопку закрытия модального окна
 data-modal - на бекдроп модального окна
 После чего, перед закрывающим тегом body добавить тег script со ссылкой на файл скрипта для модально окна. Можно посмотреть видеоинструкцию.
-
-<body>
-  <!-- Вся твоя разметка, включая разметку модалки -->
-
-  <!-- Ставим перед закрывающим тегом body -->
-  <script src="./js/modal.js"></script>
-</body>
-Вот скрипт который необходимо скопировать и вставить в файл скрипта modal.js.
-
-(() => {
-const refs = {
-openModalBtn: document.querySelector('[data-modal-open]'),
-closeModalBtn: document.querySelector('[data-modal-close]'),
-modal: document.querySelector('[data-modal]'),
-};
-
-refs.openModalBtn.addEventListener('click', toggleModal);
-refs.closeModalBtn.addEventListener('click', toggleModal);
-
-function toggleModal() {
-refs.modal.classList.toggle('is-hidden');
-}
-})();
-
-От ментора:
---Синий появляющийся оверлей на странице Portfolio в любом месте карточки при hover/ focus. И на всех карточках страницы +
---Свойство transition задаем для базового состояния элемента (а не для состояния ховера/фокуса).
---Явно указываем анимируемое свойство (transition-property). Да-да, знаем: куда легче написать all или не прописать transition-property вовсе (all применится по умолчанию). Но сделайте приятное ментору: не поленитесь указать нужное transition-property, это нужно прежде всего для вашей же тренировки и закрепления знаний.
---Анимируем переходы для ВСЕХ элементов, для которых стилизированы состояния ховера/фокуса.
---У кнопок-фильтров в состоянии ховера/фокуса помимо прочего должна появляться тень, часто ее теряете. +
---
